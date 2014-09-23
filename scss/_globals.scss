@@ -1,0 +1,78 @@
+/* 
+Globals
+	Sass variable, mixins, plugins, etc. that are used throughout the entore site.
+*/
+
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+// Loading Google Fonts
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora'), local('Lora-Regular'), url(http://fonts.gstatic.com/s/lora/v8/5-AYViExptypIdFoLKAxTA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lora Bold'), local('Lora-Bold'), url(http://fonts.gstatic.com/s/lora/v8/XpaepWHcooQHSRnzoohUng.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lora Italic'), local('Lora-Italic'), url(http://fonts.gstatic.com/s/lora/v8/wXeMvRh7Gui36p_I04Ex6g.woff) format('woff');
+}
+@font-face {
+  font-family: 'Shadows Into Light';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Shadows Into Light'), local('ShadowsIntoLight'), url(http://fonts.gstatic.com/s/shadowsintolight/v6/clhLqOv7MXn459PTh0gXYHW1xglZCgocDnD_teV2lMU.woff) format('woff');
+}
+
+@mixin body-font-regular {
+    font-family: 'Lora', helvetica, verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin body-font-italic {
+    font-family: 'Lora', helvetica, verdana, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+@mixin body-font-bold {
+    font-family: 'Lora', helvetica, verdana, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@mixin headline-font {
+    font-family: 'Shadows Into Light', helvetica, verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#wrap{
+text-align:left;
+width:700px;
+background-color: #FFFFFF;
+padding:10px;
+} 
+
+
+// Site Variables
+$color: #FF9966;
+$background-color: #CC3333;
